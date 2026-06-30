@@ -35,23 +35,25 @@
       </header>
 
       <main class="workspace">
-        <aside class="score-panel" aria-label="Practice stats">
-          <div class="stat-block">
-            <span>Progress</span>
-            <strong id="progressStat">1/10</strong>
-          </div>
-          <div class="stat-block">
-            <span>Score</span>
-            <strong id="scoreStat">0/10</strong>
-          </div>
-          <div class="stat-block">
-            <span>Avg miss</span>
-            <strong id="missStat">--</strong>
-          </div>
-          <button class="ghost-button" type="button" id="restartSet">Restart set</button>
+        <aside class="score-rail" aria-label="Practice stats and support">
+          <section class="score-panel" aria-label="Practice stats">
+            <div class="stat-block">
+              <span>Progress</span>
+              <strong id="progressStat">1/10</strong>
+            </div>
+            <div class="stat-block">
+              <span>Score</span>
+              <strong id="scoreStat">0/10</strong>
+            </div>
+            <div class="stat-block">
+              <span>Avg miss</span>
+              <strong id="missStat">--</strong>
+            </div>
+            <button class="ghost-button" type="button" id="restartSet">Restart set</button>
+          </section>
           <a class="support-link" href="https://buymeacoffee.com/sidhantchadda" target="_blank" rel="noopener noreferrer">
-            <span>Domain fund</span>
-            <strong>Buy me a coffee</strong>
+            <span>Support the site</span>
+            <strong>Buy me a coffee ☕</strong>
           </a>
         </aside>
 
@@ -91,6 +93,10 @@
             <p class="question-copy" id="setSummaryCopy"></p>
             <div class="summary-grid" id="summaryGrid"></div>
             <div class="review-list" id="reviewList"></div>
+            <a class="support-link summary-support" href="https://buymeacoffee.com/sidhantchadda" target="_blank" rel="noopener noreferrer">
+              <span>Support the site</span>
+              <strong>Buy me a coffee ☕</strong>
+            </a>
             <div class="controls">
               <button class="primary-button" type="button" id="retrySet">Retry set</button>
             </div>

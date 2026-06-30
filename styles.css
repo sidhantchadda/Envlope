@@ -197,7 +197,6 @@ button {
   align-items: start;
 }
 
-.score-panel,
 .drill-panel,
 .tools-panel {
   border: 1px solid var(--line);
@@ -206,10 +205,20 @@ button {
   box-shadow: var(--shadow);
 }
 
+.score-rail {
+  display: grid;
+  gap: 12px;
+  align-content: start;
+}
+
 .score-panel {
   display: grid;
   gap: 10px;
   padding: 12px;
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  background: var(--panel);
+  box-shadow: var(--shadow);
 }
 
 .stat-block {
@@ -287,6 +296,11 @@ button {
   color: var(--ink);
   font-size: 0.98rem;
   line-height: 1.15;
+}
+
+.summary-support {
+  width: min(280px, 100%);
+  margin-top: 16px;
 }
 
 .drill-panel {
@@ -792,11 +806,14 @@ button:disabled:hover {
     margin-top: 14px;
   }
 
-  .score-panel {
+  .score-rail {
     order: 3;
-    grid-template-columns: repeat(2, minmax(0, 1fr));
     width: 100%;
     margin-top: 14px;
+  }
+
+  .score-panel {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
   .ghost-button {
