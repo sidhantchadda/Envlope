@@ -1,7 +1,7 @@
 const SECOND_PER_HOUR = 3_600;
 const SECOND_PER_DAY = 86_400;
 const SESSION_LENGTH = 10;
-const MODE_STORAGE_KEY = "envlope-color-mode";
+const MODE_STORAGE_KEY = "envelope-color-mode";
 
 const state = {
   activeFilter: "all",
