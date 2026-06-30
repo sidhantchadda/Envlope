@@ -1,0 +1,73 @@
+:root {
+  color-scheme: light;
+
+  /*
+    App colors live here.
+    Light mode is notebook-inspired with a flat paper background and warm orange accents.
+  */
+  --ink: #252525;
+  --muted: #68645b;
+
+  --paper: #fffdf4;
+  --page-background: var(--paper);
+  --panel: #ffffff;
+  --panel-soft: #faf6e8;
+  --field: #fffefa;
+
+  --line: #e6dfcc;
+  --line-strong: #b8ad92;
+
+  --accent: #9b693d;
+  --accent-soft: #f7efe6;
+  --accent-fill: #ead7c1;
+  --accent-fill-hover: #dfc7aa;
+  --accent-border-soft: rgba(155, 105, 61, 0.24);
+  --accent-border-strong: rgba(155, 105, 61, 0.36);
+  --focus-ring: rgba(155, 105, 61, 0.14);
+
+  --good: #5f7462;
+  --good-soft: #f3f6f1;
+  --warn: #856f4b;
+  --warn-soft: #f8f2e4;
+  --miss: #8a6763;
+  --miss-soft: #f6eeee;
+
+  --meter-track: #eee6d1;
+  --shadow: 0 18px 45px rgba(48, 44, 34, 0.09);
+  --brand-shadow: 0 8px 20px rgba(155, 105, 61, 0.12);
+}
+
+:root[data-mode="dark"] {
+  color-scheme: dark;
+
+  --ink: #f0eee8;
+  --muted: #aaa39a;
+
+  --paper: #151515;
+  --page-background: var(--paper);
+  --panel: #1f1f1d;
+  --panel-soft: #282520;
+  --field: #121211;
+
+  --line: #36322c;
+  --line-strong: #5e574c;
+
+  --accent: #b98757;
+  --accent-soft: #2a2119;
+  --accent-fill: #3b2b1d;
+  --accent-fill-hover: #493523;
+  --accent-border-soft: rgba(185, 135, 87, 0.24);
+  --accent-border-strong: rgba(185, 135, 87, 0.4);
+  --focus-ring: rgba(185, 135, 87, 0.18);
+
+  --good: #91a386;
+  --good-soft: #20271d;
+  --warn: #c6a36a;
+  --warn-soft: #2b2419;
+  --miss: #b78a83;
+  --miss-soft: #2b1f1e;
+
+  --meter-track: #332d22;
+  --shadow: 0 18px 45px rgba(0, 0, 0, 0.22);
+  --brand-shadow: 0 8px 20px rgba(185, 135, 87, 0.12);
+}

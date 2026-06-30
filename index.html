@@ -1,0 +1,142 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Envlope | Back-of-Envelope Drills</title>
+    <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+    <link rel="stylesheet" href="theme.css" />
+    <link rel="stylesheet" href="styles.css" />
+    <script defer src="app.js"></script>
+  </head>
+  <body>
+    <div class="app-shell">
+      <header class="topbar">
+        <a class="brand" href="./" aria-label="Envlope home">
+          <span class="brand-mark">E</span>
+          <span>
+            <strong>Envlope</strong>
+            <small>Back-of-envelope drills</small>
+          </span>
+        </a>
+        <div class="topbar-actions">
+          <div class="mode-tabs" aria-label="Question category">
+            <button class="tab is-active" type="button" data-filter="all">All</button>
+            <button class="tab" type="button" data-filter="traffic">Traffic</button>
+            <button class="tab" type="button" data-filter="storage">Storage</button>
+            <button class="tab" type="button" data-filter="latency">Latency</button>
+            <button class="tab" type="button" data-filter="capacity">Capacity</button>
+          </div>
+          <button class="mode-toggle" id="darkModeToggle" type="button" aria-label="Turn on dark mode" aria-pressed="false">
+            <span class="mode-icon mode-icon-sun" aria-hidden="true">☀</span>
+            <span class="mode-icon mode-icon-moon" aria-hidden="true">☾</span>
+          </button>
+        </div>
+      </header>
+
+      <main class="workspace">
+        <aside class="score-panel" aria-label="Practice stats">
+          <div class="stat-block">
+            <span>Progress</span>
+            <strong id="progressStat">1/10</strong>
+          </div>
+          <div class="stat-block">
+            <span>Score</span>
+            <strong id="scoreStat">0/10</strong>
+          </div>
+          <div class="stat-block">
+            <span>Avg miss</span>
+            <strong id="missStat">--</strong>
+          </div>
+          <button class="ghost-button" type="button" id="restartSet">Restart set</button>
+        </aside>
+
+        <section class="drill-panel" aria-live="polite">
+          <div id="questionView">
+            <div class="drill-meta">
+              <span class="chip" id="categoryChip">Traffic</span>
+              <span class="chip muted" id="difficultyChip">Warmup</span>
+              <span class="drill-count" id="drillCount">Question 1 of 10</span>
+            </div>
+
+            <h1 id="questionTitle">Loading drill...</h1>
+            <p class="question-copy" id="questionCopy"></p>
+
+            <div class="facts-grid" id="factsGrid" aria-label="Given facts"></div>
+
+            <form class="answer-form" id="answerForm">
+              <div class="answer-list" id="answerList"></div>
+              <div class="controls">
+                <button class="primary-button" type="submit" id="checkAnswer">Check answer</button>
+                <button class="secondary-button" type="button" id="nextQuestion">Next question</button>
+              </div>
+            </form>
+
+            <section class="feedback-panel" id="feedbackPanel" hidden>
+              <div class="feedback-head">
+                <span class="result-badge" id="resultBadge">Great</span>
+                <p id="resultSummary"></p>
+              </div>
+              <div class="breakdown" id="breakdown"></div>
+            </section>
+          </div>
+
+          <section class="set-summary" id="setSummary" hidden>
+            <span class="chip">Complete</span>
+            <h1>Set complete</h1>
+            <p class="question-copy" id="setSummaryCopy"></p>
+            <div class="summary-grid" id="summaryGrid"></div>
+            <div class="review-list" id="reviewList"></div>
+            <div class="controls">
+              <button class="primary-button" type="button" id="retrySet">Retry set</button>
+            </div>
+          </section>
+        </section>
+
+        <aside class="tools-panel" aria-label="Scratch pad and constants">
+          <section class="scratch-panel" aria-labelledby="scratchTitle">
+            <div class="scratch-head">
+              <h2 id="scratchTitle">Scratch pad</h2>
+              <button class="secondary-button compact-button" type="button" id="clearScratch">Clear</button>
+            </div>
+            <textarea id="scratchPad" rows="14" spellcheck="false"></textarea>
+          </section>
+
+          <details class="constants-panel">
+            <summary>Fast constants</summary>
+            <dl>
+              <div>
+                <dt>1 day</dt>
+                <dd>86,400 sec</dd>
+              </div>
+              <div>
+                <dt>1 hour</dt>
+                <dd>3,600 sec</dd>
+              </div>
+              <div>
+                <dt>1 MB</dt>
+                <dd>1,000 KB</dd>
+              </div>
+              <div>
+                <dt>1 GB</dt>
+                <dd>1,000 MB</dd>
+              </div>
+              <div>
+                <dt>1 TB</dt>
+                <dd>1,000 GB</dd>
+              </div>
+              <div>
+                <dt>1 PB</dt>
+                <dd>1,000 TB</dd>
+              </div>
+              <div>
+                <dt>Bytes to bits</dt>
+                <dd>x 8</dd>
+              </div>
+            </dl>
+          </details>
+        </aside>
+      </main>
+    </div>
+  </body>
+</html>
